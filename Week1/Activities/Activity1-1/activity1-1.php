@@ -8,7 +8,7 @@
 
 	
 	<?php
-	$name = "Jana Nash";
+	$name = "Jana Nash-Siegle";
 	$age = 52;
 	echo "1.  My name is " . $name . " and my age is " . $age . ".";
 	?><br /><br />
@@ -29,7 +29,7 @@
 	?> //$personindex<br /> <br />
 
 	<?php
-	$person = array("name" => "Jana", "age" => "52");
+	$person = array("name" => "Jana Nash-Siegle", "age" => "52");
 	
 	?> 
 	<?php echo "4.  " . $person["name"]. " " . $person["age"];?>  // key/value pairs<br /><br />
