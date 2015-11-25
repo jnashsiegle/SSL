@@ -1,0 +1,6 @@
+#6 - 
+When you use the unset() it destroys the variable and so no value is returned.  
+
+If the variable is global inside of a function only the local use of the variable is destroyed.  In order to unset() a global variable you must do so using $globals.
+
+If you unset() a static variable inside of a function it only destroys it in the context used until it is once again restored to the previous value.
