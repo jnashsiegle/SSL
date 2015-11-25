@@ -2,7 +2,7 @@
 <html>
 <head lang = "en">
 	<meta charset = "UTF-8">
-	<title>strings</title>
+	<title>string functions</title>
 </head>
 <body>
 
