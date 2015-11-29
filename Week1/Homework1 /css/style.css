@@ -1,0 +1,32 @@
+body{
+	text-align: center;
+	background: url("../img/bkg.jpg") no-repeat fixed center;	
+	font: 20px "Helvetica Nue";
+	overflow: hidden;
+}
+form{
+	float: left;
+}
+input[type = 'text'], input[type = 'password'], input[type = 'file'], input[type = 'reset']{
+	border-radius: 10px;
+	height: 30px;
+	width: 200px;
+	margin: 10px;
+	font: 16px "Helvetica Nue";
+	color: white;
+	background: red;
+	border: 3px solid green;
+}
+input[type = 'file']{
+	height: 18px;
+}
+input[type = 'submit'], input[type = 'reset'] {
+	border-radius: 20px;
+	height: 30px;
+	width: 100px;
+	margin: 10px;
+	font: 14px "helvetica Nue";
+	color: white;
+	background: red;
+	border: 3px solid green;
+}

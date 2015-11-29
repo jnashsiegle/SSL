@@ -1,0 +1,36 @@
+create function to store the post variables from form
+	variables into associative array
+
+if user fills in first name
+	assign key f_name & set value 'f_name'
+	else
+	set default
+
+if user fills in last name
+	assign key l_name & set value 'l_name;
+	else
+	set default
+	
+if user fills in username
+	assign key username & set value 'username'
+	else
+	display err message / required field
+	
+if user fills in password
+	assign key || salt & hash || set value 'password'
+	else
+	display err message / required field
+	
+if user chooses a file to upload for avatar image
+	move image file with $_FILES['tmp_name'] to images directory
+	assign key || set value of image path
+	else
+	display err message
+	
+return array
+
+call function 
+
+loop through items in array key value ||  echo values submitted || display image src for avatar
+
+
