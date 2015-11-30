@@ -1,11 +1,15 @@
+<!--
+	* SSL Form Processing APP php
+	* Jana Nash-Siegle
+	* 11/28/2015
+-->
+
 <!DOCTYPE html>
 <html>
 <head lang = "en">
-	<title>SSL Form Processing App - by Jana</title>
-	
+	<title>SSL Form Processing App - by Jana</title>	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href = "css/style1.css")>
+	<link rel="stylesheet" href = "css/style1.css">
 </head>
 <body>
 <div class = "results">
@@ -40,7 +44,6 @@
 			}
 		}
 	}
-
 	//END imgDir()
 
 	//IF STATEMENT for POST insurance and SUBMIT clickage
@@ -61,21 +64,18 @@
 	foreach($data as $attribute => $data) {
 		echo "<p align = left><font color = #fff>{$attribute}</font>: {$data}";
 	}
-
 		echo "</td></tr></table>"; // end table html
-
-		//ECHO User's Image at bottom
-
+		
 		echo imgDir() . "<br /><br />";  //let's call the imgDir function so the avatar image will show upon submittal
 } //end isset
 ?>
 </div>
 	
 	
-<pre> 
-	
-	<?php echo "<br /><br />Variables: " . print_r(get_defined_vars()); ?>
-</pre>
+<!-- <pre> 
+//	
+ //echo "<br /><br />Variables: " . print_r(get_defined_vars()); ?> 
+</pre> -->
 
 </body>
 </html>
