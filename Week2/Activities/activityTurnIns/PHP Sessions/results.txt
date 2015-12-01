@@ -1,0 +1,15 @@
+In testing the files I found the following conclusions:
+
+Upon opening a new window, the session id would persist, but the variables did not.  I received "Undefined Index" Notices for all session variables in the getSession.php file.
+
+When I completely closed the browser window, the results were the same.  I was able to get the Session Id but I was not able to access the variables that were set in the setSession.php file.
+
+I used this url, I did not load the url with the variables embedded.
+http://localhost:8888/SSL/Week2/Activities/activityTurnIns/getSession.php?
+
+When I ran the setSession.php file I was able to build a query string that passed the variables along with the url.  
+
+[query_string] => name=Jana Nash-Siegle&city=Canyon Lake&state=Texas&profession=Student
+    [url] => getSession.php?name=Jana+Nash-Siegle&city=Canyon+Lake&state=Texas&profession=Student
+    
+    I'm not super confident at this point that the scripts are operating correctly.  The info is there so I think it is, but I just cannot be for sure with the knowledge I have that I did this correctly.  
