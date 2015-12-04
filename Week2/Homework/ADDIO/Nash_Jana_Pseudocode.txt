@@ -1,0 +1,24 @@
+set form & display on webpage
+
+get fruit data and display on webpage
+	assign key fruitname || fruitcolor for $_POST
+
+create function to add fruit to SSL DB
+	if $_SERVER['REQUEST_METHOD'] = $_POST 
+		fields are null
+		insert into fruits(fruitname, fruitcolor) and bind
+	else
+		do not add
+
+create prepare statement for $result to fetchall with PDO
+	foreach loop to display $result as $row 
+	echo $result for display
+
+
+create prepare statment for DELETE
+	bindParam to fruitid
+	execute
+
+update database and webpage
+
+Redirect to fruits.php
