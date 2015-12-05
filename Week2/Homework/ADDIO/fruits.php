@@ -28,26 +28,33 @@ $stmt->execute();
 	<meta charset = "UTF-8">
 	<title>Fruits</title>
 	<link rel = "stylesheet" href = "css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <article>
-	<header>My Fruit Database App</header>
+	<header>
+		<h1>My Fruit Database App</h1>
+	<h2>Add your favorite fruit!</h2>
+	</header>
 	<form enctype = "multipart/form_fruits" action = "fruits.php" method = "POST">
 	<ul>
 		<li>
 			<fieldset>
-				<legend>Fruit Name</legend>
+				<legend align = "center">Fruit Name</legend>
 					<input type = "text" name = "fruitName" value = "" required>
 			</fieldset>
 		</li>
 		<li>
 			<fieldset>
-				<legend> Fruit Color</legend>
+				<legend align = "center"> Fruit Color</legend>
 					<input type = "text" name = "fruitColor" value = "" required>
 			</fieldset>
-		</li>			
+		</li>	
+		<li>
+			<input type = "submit" name = "submit" value = "Submit" />
+		</li>		
 	</ul>
-	<input type = "submit" name = "submit" value = "Submit" />
+	
 	</form>	
 
 	<section class = "display">
