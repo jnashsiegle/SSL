@@ -1,0 +1,27 @@
+body, html{
+	width: 100%;
+}
+article{
+	margin: 0 auto;
+	width: 80%;
+	border: 1px solid black;
+}
+form ul{
+	margin: 0 auto;
+	border: 1px solid red;
+	padding: 0;	
+}
+input{
+	width: 200px;
+}
+section.display ul{
+	margin: 0 auto;
+	border: 1px solid blue;
+	padding: 0;
+	text-align: center;
+}
+li{
+	display:inline;
+	margin: 50px;
+}
+
