@@ -13,3 +13,5 @@ When I ran the setSession.php file I was able to build a query string that passe
     [url] => getSession.php?name=Jana+Nash-Siegle&city=Canyon+Lake&state=Texas&profession=Student
     
     I'm not super confident at this point that the scripts are operating correctly.  The info is there so I think it is, but I just cannot be for sure with the knowledge I have that I did this correctly.  
+
+Jana Nash-Siegle

@@ -1,4 +1,9 @@
 <?php
+
+/*	Jana Nash-Siegle
+	SSL
+	deletefruit.php
+*/
 $user 	= "root";
 $pass	= "root";
 $db 	= new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);

@@ -16,13 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$fruitColor = $_POST['fruitColor'];  //getting POST values
 	$stmt      	= $db->prepare("INSERT INTO fruits (fruitName, fruitColor) VALUES (:fruitName, :fruitColor);");  //insert into and where the database
 
-$stmt ->bindParam(':fruitName', $fruitName);
+$stmt ->bindParam(':fruitName', $fruitName);  //bind variables to db
 $stmt->bindParam(':fruitColor', $fruitColor);
 $stmt->execute();
 }	
 ?>
-
-<!DOCTYPE html>
+<!-- Setting up the form and the display -->
+<!DOCTYPE html>  
 <html>
 <head lang = "en">
 	<meta charset = "UTF-8">

@@ -1,0 +1,12 @@
+1) Run through Code
+a. After the name comments I begin the code by setting up the DB Username and Password so we can access the database from the form.  We set up the new php data object starting on line 13 and retrieve the POST values preparing to insert them into the database table fruits.
+
+Line 19 binds the parameters of the table to the variables.
+
+Starting Line 25 we begin the html for setting up the form.  We use the multipart enctype and set up a simple form to allow the user to insert a new fruit and color of the fruit into our table.
+
+Below the form we have a section to display the data from the database using table headers.  The data will be sorted in Ascending order by the value of the id and will be displayed within our echo function as a table using tr’s and td’s.
+
+Run through the form, showing how it works, add a fruit, show the added fruit before and after within the database and then delete.
+
+Youtube URL  https://youtu.be/dey4JCyRoVk

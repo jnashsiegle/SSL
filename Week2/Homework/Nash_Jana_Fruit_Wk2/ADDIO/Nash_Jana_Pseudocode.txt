@@ -1,3 +1,7 @@
+Jana Nash-Siegle
+SSL
+151201
+
 set form & display on webpage
 
 get fruit data and display on webpage
@@ -22,3 +26,5 @@ create prepare statment for DELETE
 update database and webpage
 
 Redirect to fruits.php
+
+
