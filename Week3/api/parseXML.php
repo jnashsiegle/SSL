@@ -23,7 +23,7 @@ foreach($contents->feed as $feed){
 $contents = simplexml_load_file("myxml.xml");
 
 
-//var_dump($contents);
+var_dump($contents);
 
 foreach($contents->feed as $feed){
 		echo "from file<br />";
