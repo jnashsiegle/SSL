@@ -1,21 +1,18 @@
 <?php
-// Activity 3-2
-// Jana Nash-Siegle
-// 151201
+//pull data from a database via PDO
+//Lets' make it a json object
+//jana nash-siegle
 
-$fruits = file_get_contents("http://localhost:8888/SSL/Week3/turnIns/Activity3-2/fruitjson.php");
+$content = file_get_contents("http://localhost:8888/SSL/Week3/turnIns/Activity3-2/fruitjson.php");
 
-$encoded = json_decode($fruits);
+$encoded = json_decode($content);
 
 //var_dump($content);
 
-foreach($encoded->fruits as $fruit){
-
-	echo $fruit->fruitName . " ";
-
-	echo $fruit->fruitColor ."\n";
+foreach($encoded as $fruit){
+	echo "Name - " . " " . $fruit->fruitName. " | ";
+	echo "Color - " . " " . $fruit->fruitColor. "<br />";
 }
-
 
 ?>
 
