@@ -1,16 +1,21 @@
-<?
+<?php
+// Activity 3-2
+// Jana Nash-Siegle
+// 151201
 
-$content = file_get_contents("http://localhost:8888/SSL/Week3/turnIns/Activity3-2/fruitjson.php");
+$fruits = file_get_contents("http://localhost:8888/SSL/Week3/turnIns/Activity3-2/fruitjson.php");
 
-$encoded = json_decode($content);
+$encoded = json_decode($fruits);
 
-var_dump($content);
+//var_dump($content);
 
-foreach($content->fruits as $fruit){
-	echo "parse from url<br />";
-	echo $fruit[1]->fruitName. "<br />";
-	echo $fruit[2]->fruitColor. "<br />";
+foreach($encoded->fruits as $fruit){
+
+	echo $fruit->fruitName . " ";
+
+	echo $fruit->fruitColor ."\n";
 }
+
 
 ?>
 

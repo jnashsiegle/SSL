@@ -1,24 +1,31 @@
 <?php
-//pull data from a database via PDO
-//Lets' make it a json object
+//pull fruit data from database
+// Jana Nash-Siegle
+// 151201
 header("Content-type:application/json");
 
 $user = 'root';
 $pass = 'root';
 $dbh = new PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
 
-$sql = "select id, fruitName, fruitColor from fruits order by fruitName";
+$sql = "SELECT id, fruitName, fruitColor FROM fruits ORDER BY fruitName";
 
-$stmnt = $dbh->prepare($sql);
+$stmnt= $dbh->prepare($sql);
 
 $stmnt->execute();
 
-$result = $stmnt->fetchAll(PDO::FETCH_ASSOC);
+$fruits = $stmnt->fetchAll();
 
+//foreach($fruits as $fruit){
+//	echo $fruit["fruitName"] . " ";
 
-
-echo json_encode($result);
-
-
+//	echo $fruit["fruitColor"]."\n";
+//};
+echo json_encode($fruits);
 
 ?>
+
+
+
+
+
