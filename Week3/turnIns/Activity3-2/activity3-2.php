@@ -2,7 +2,7 @@
 
 $content = file_get_contents("http://localhost:8888/SSL/Week3/turnIns/Activity3-2/fruitjson.php");
 
-//$encoded = json_decode($content);
+$encoded = json_decode($content);
 
 var_dump($content);
 

@@ -13,16 +13,6 @@ $stmnt->execute();
 
 $result = $stmnt->fetchAll();
 
-//simply display a list of fruit names
-/*
-foreach($result as $fruit){
-	echo $fruit["fruitName"]."<br />";
-};
-*/
-//Lets' make it a json object
-//header("Content-type:application/json");
-//echo json_encode($result);
-
 //let's do it in XML
 header("Content-type:text/xml");
 $xmlfile = '<?xml version="1.0" encoding="UTF-8"?>';
