@@ -12,26 +12,21 @@ $stmnt = $dbh->prepare($sql);
 
 $stmnt->execute();
 
-$content = $stmnt->fetchAll();
+$xml = $stmnt->fetchAll();
 
 //let's do it in XML
 header("Content-type:text/xml");
 $xmlfile = '<?xml version="1.0" encoding="UTF-8"?>';
 $xmlfile .= '<fruits>';
-foreach($content as $fruit){
+foreach($xml as $fruit){
+	$xmlfile .= '<fruit>';
 	$xmlfile .= "<id>".$fruit["id"]."</id>";
 	$xmlfile .= "<fruitName>".$fruit["fruitName"]."</fruitName>";
 	$xmlfile .= "<fruitColor>".$fruit["fruitColor"]."</fruitColor>";
+	$xmlfile .= '</fruit>';
 	
 };
 $xmlfile .= '</fruits>';
 echo $xmlfile;
-
-
-
-
-
-
-
 
 ?>
