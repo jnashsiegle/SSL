@@ -98,9 +98,12 @@ $stmt = $db->prepare('SELECT * FROM fruits order by id ASC;');
 
 $stmt->execute();
 $result = $stmt->fetchall(PDO::FETCH_ASSOC);
+
 foreach ($result as $row) {
-	echo '<tr><td>' . $row['id'] . '</td><td>' . $row['fruitName'] . '</td><td>' . $row['fruitColor'] . '</td><td>' . $row['fruitImage'] . '</td><td><a href = "deletefruit.php?id=' . $row['id'] . '">Delete</a><br />';
+echo '<tr><td>' . $row['id'] . '</td><td>' . $row['fruitName'] . '</td><td>' . $row['fruitColor'] . '</td><td> '. $row['fruitImage'] . ' </td><td><a href = "deletefruit.php?id=' . $row['id'] . '">Delete</a><br />';
 }
+
+
 ?>
 </table></section>
 </article>
