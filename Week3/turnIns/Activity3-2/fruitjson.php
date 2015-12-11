@@ -16,11 +16,6 @@ $stmnt->execute();
 
 $fruits = $stmnt->fetchAll();
 
-//foreach($fruits as $fruit){
-//	echo $fruit["fruitName"] . " ";
-
-//	echo $fruit["fruitColor"]."\n";
-//};
 echo json_encode($fruits);
 
 ?>

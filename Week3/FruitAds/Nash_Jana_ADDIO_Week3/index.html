@@ -1,0 +1,50 @@
+<!--Jana Nash-Siegle
+	SSL
+	151201
+-->
+<!DOCTYPE html>
+<html>
+<head lang = "en">
+	<meta charset = "UTF-8">
+	<title>Fruits</title>
+	<link rel = "stylesheet" href = "css/normalize.css">
+	<link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+<article>
+	<header>
+		<section id = "fruitAds">
+			<h1>My Fruit Database App</h1>
+			<h2>Fruit Spotlight</h2>
+				<img src = "images/placeholder.png" alt = "picture of fruit">
+			<h3>Our Spiffy fruit of the day (aka Fruit Name)</h3>
+		</section>
+	</header>
+	<section class = "form_fruits"><form action = "fruits.php" method = "POST">
+	<ul>
+		<li>
+			<fieldset>
+				<legend>Fruit Name</legend>
+					<input type = "text" name = "fruitName" value = "" placeholder = "What type of fruit?" required>
+			</fieldset>
+		</li>
+		<li>
+			<fieldset>
+				<legend> Fruit Color</legend>
+					<input type = "text" name = "fruitColor" value = "" placeholder = "What color is the fruit?" required>
+			</fieldset>
+		</li>
+		<li>
+			<fieldset>
+				<legend> Fruit Image</legend>
+					<input type = "text" name = "fruitImage" value = "" placeholder = "URL here for the image" required>
+			</fieldset>
+		</li>
+	</ul
+	</form></section>
+
+	<section class = "display">
+		<ul>
+			<li>fruit id</li><li>fruitName</li><li>fruitColor</li><li>fruitImage</li><li><a href = "delete">DELETE</a></li>
+		</ul>
+	</section>

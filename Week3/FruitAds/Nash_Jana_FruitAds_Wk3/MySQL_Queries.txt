@@ -1,0 +1,23 @@
+Jana Nash-Siegle
+SSL
+151201
+
+2.1. From Sequel Pro, run the following query: 
+select * from fruit_table;
+How long did the query take to run? 
+
+.3ms
+
+2.2. Run the following query that is more specific. 
+select * from fruit_table where color = 'yellow';
+How long did this query take compared to the first? 
+
+.4ms
+.1ms longer than the firsgt query
+
+2.3. Run the following query, limiting the results. 
+select name from fruit_table where name LIKE "apple%" order by name limit 2;
+How did this query compare with the first two?
+
+.3ms
+It took the same amount of time.
