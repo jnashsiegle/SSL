@@ -9,7 +9,7 @@
 $spotFruit = file_get_contents("http://localhost:8888/SSL/Week3/FruitAds/Nash_Jana_FruitAds_Wk3/fruitget.php");
 // decode result 
 $spotFruit = json_decode($spotFruit)[0];
-var_dump($spotFruit);
+//var_dump($spotFruit);  // TESTING PURPOSES ONLY
 //End FRUIT OF DAY CALL
 
 // Setting up DB Username & Password
