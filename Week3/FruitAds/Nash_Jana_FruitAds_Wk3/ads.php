@@ -54,18 +54,18 @@ $stmt->execute();
 			<h3>This is a <?=$spotFruit->fruitColor. " " . $spotFruit->fruitName;?></h3>
 		</section>
 	</header>
-	<form enctype = "multipart/form_fruits" action = "ads.php" method = "POST">
+	<form enctype = "multipart/form_fruits" name = "fruitForm" action = "ads.php" method = "POST">
 	<ul>
 		<li>
 			<fieldset>
 				<legend align = "center">Fruit Name</legend>
-					<input type = "text" name = "fruitName" value = "" required>
+					<input type = "text" name = "fruitName" value = "" placeholder = "Name of fruit" required>
 			</fieldset>
 		</li>
 		<li>
 			<fieldset>
 				<legend align = "center"> Fruit Color</legend>
-					<input type = "text" name = "fruitColor" value = "" required>
+					<input type = "text" name = "fruitColor" value = "" placeholder = "Color of fruit" required>
 			</fieldset>
 		</li>
 		<li>
@@ -76,6 +76,9 @@ $stmt->execute();
 		</li>	
 		<li>
 			<input type = "submit" name = "submit" value = "Submit" />
+		</li>
+		<li>
+			<input type="button" onclick="myFunction()" value="Reset form">
 		</li>		
 	</ul>
 	
@@ -99,8 +102,12 @@ $stmt = $db->prepare('SELECT * FROM fruits order by id ASC;');
 $stmt->execute();
 $result = $stmt->fetchall(PDO::FETCH_ASSOC);
 
+
+
 foreach ($result as $row) {
-echo '<tr><td>' . $row['id'] . '</td><td>' . $row['fruitName'] . '</td><td>' . $row['fruitColor'] . '</td><td> '. $row['fruitImage'] . ' </td><td><a href = "deletefruit.php?id=' . $row['id'] . '">Delete</a><br />';
+$url = '<a href="' . $row['fruitImage'] . '" target="_blank"> ' . $row['fruitImage'] . ' </a>';
+echo '<tr><td>' . $row['id'] . '</td><td>' . $row['fruitName'] . '</td><td>' . $row['fruitColor'] . '</td><td>' . $url . 
+'</td><td><a href = "deletefruit.php?id=' . $row['id'] . '">Delete</a><br />';
 }
 
 

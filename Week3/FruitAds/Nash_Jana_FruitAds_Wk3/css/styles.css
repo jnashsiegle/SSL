@@ -40,11 +40,12 @@ form ul{
 	padding: 0;	
 }
 input{
-	width: 60%;
-}
-li input[type="submit"]{	
 	width: 40%;
-	font-size: 105%;
+	height: 30px;
+}
+li input[type="submit"], li input[type="button"]{	
+	width: 20%;
+	font-size: 115%;
 	background-color: #e1d8c3;
 	margin: 20px 0 20px 0;
 	border-radius: 15px;
@@ -53,8 +54,7 @@ section.display{
 	background-color: #3c4f28;
 	padding: 0;
 	text-align: center;
-	width: 100%;
-	
+	width: 100%;	
 }
 section.display ul li{	
 	margin-right: 80px;	
