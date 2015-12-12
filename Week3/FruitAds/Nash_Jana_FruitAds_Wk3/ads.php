@@ -30,8 +30,6 @@ $stmt->bindParam(':fruitImage', $fruitImage);
 $stmt->execute();
 }	
 ?>
-
-<!-- Fruit LOOP for ADS upon Page Refresh -->
 	
 <!-- Setting up the form and the display -->
 <!DOCTYPE html>  
@@ -54,7 +52,7 @@ $stmt->execute();
 			<h3>This is a <?=$spotFruit->fruitColor. " " . $spotFruit->fruitName;?></h3>
 		</section>
 	</header>
-	<form enctype = "multipart/form_fruits" name = "fruitForm" action = "ads.php" method = "POST">
+	<form enctype = "multipart/form_fruits" id = "form_fruits" action = "ads.php" method = "POST">
 	<ul>
 		<li>
 			<fieldset>
@@ -78,7 +76,7 @@ $stmt->execute();
 			<input type = "submit" name = "submit" value = "Submit" />
 		</li>
 		<li>
-			<input type="button" onclick="myFunction()" value="Reset form">
+			<input type="button" onclick="resetFunction()" value="Reset form">
 		</li>		
 	</ul>
 	
@@ -102,7 +100,7 @@ $stmt = $db->prepare('SELECT * FROM fruits order by id ASC;');
 $stmt->execute();
 $result = $stmt->fetchall(PDO::FETCH_ASSOC);
 
-
+//Fruit LOOP for ADS upon Page Refresh 
 
 foreach ($result as $row) {
 $url = '<a href="' . $row['fruitImage'] . '" target="_blank"> ' . $row['fruitImage'] . ' </a>';
@@ -114,5 +112,6 @@ echo '<tr><td>' . $row['id'] . '</td><td>' . $row['fruitName'] . '</td><td>' . $
 ?>
 </table></section>
 </article>
+<script src="js/script.js"></script>
 </body>
 </html>

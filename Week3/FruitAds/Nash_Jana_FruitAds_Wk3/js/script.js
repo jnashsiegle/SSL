@@ -1,5 +1,4 @@
-<script>
+
 function resetFunction() {
-    document.getElementById("fruitForm").reset();
+    document.getElementById("form_fruits").reset();
 }
-</script>

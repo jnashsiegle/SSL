@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.42)
 # Database: SSL
-# Generation Time: 2015-12-06 18:06:52 +0000
+# Generation Time: 2015-12-11 16:37:48 +0000
 # ************************************************************
 
 
@@ -29,18 +29,23 @@ CREATE TABLE `fruits` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `fruitName` varchar(50) DEFAULT '',
   `fruitColor` varchar(50) DEFAULT '',
+  `fruitImage` varchar(255) DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `fruits` WRITE;
 /*!40000 ALTER TABLE `fruits` DISABLE KEYS */;
 
-INSERT INTO `fruits` (`id`, `fruitName`, `fruitColor`)
+INSERT INTO `fruits` (`id`, `fruitName`, `fruitColor`, `fruitImage`)
 VALUES
-	(6,'Apple','red'),
-	(7,'Lemon','yellow'),
-	(13,'Lime','Green'),
-	(15,'Watermelon','yellow-green');
+	(6,'apple','red','http://www.kimmelorchard.org/img/icon_apple_red_delicious.png'),
+	(7,'lemon','yellow','https://rs706.pbsrc.com/albums/ww61/lemon56/lemon.jpg~c200'),
+	(15,'watermelon','yellow-green','http://www.pvfarms.com/images/ourproduce_watermelon.png'),
+	(16,'apple','green','http://www.lanierupshaw.com/wp-content/uploads/2014/10/green-apple-fruit-hd-wallpaper.jpg'),
+	(18,'cranberry','red','http://www.anaturaldifference.com/wp-content/uploads/2014/01/shutterstock_107675522.jpg'),
+	(21,'orange','orange','http://weknowyourdreams.com/images/orange/orange-04.jpg'),
+	(23,'lime','green','http://researcher.watson.ibm.com/researcher/files/us-rabbah/lime.gif'),
+	(24,'jabuticaba','purple','http://media.mnn.com/assets/images/2010/08/jabuticaba.jpg.638x0_q80_crop-smart.jpg');
 
 /*!40000 ALTER TABLE `fruits` ENABLE KEYS */;
 UNLOCK TABLES;
