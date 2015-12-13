@@ -1,0 +1,64 @@
+<!--
+	* SSL Final Week 4
+	* Jana Nash-Siegle
+	* 12/12/2015
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang = "en">
+	<title>Client Contact Manager</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "css/normalize.css">
+	<link rel="stylesheet" href = "css/style.css">
+</head>
+<body>
+
+<article id = "main">
+	<header>
+		<section id = "clientList">
+			<h1>Client Contact Manager</h1>
+				<h2>Jana Nash-Siegle</h2>
+		</section>
+	</header>
+		<!-- The data encoding type, enctype, MUST be specified as below -->
+	<form enctype="multipart/form-data" action="newuser.php" method="POST">
+	<h2>Add New Client</h2>
+	<div class="formGroup">
+			<label>First Name</label>
+			<input type="text" name="f_name" placeholder = "First Name" required>
+		</div>
+	<div class="formGroup">
+			<label>Last Name</label>
+			<input type="text" name="l_name" placeholder = "Last Name" required>
+	</div>
+	<div class="formGroup">
+			<label>Email</label>
+			<input type="email" name="email" placeholder = "Valid Email Address" required>
+	</div>
+	<div class="formGroup">
+			<label>Website</label>
+			<input type="url" name="website" placeholder = "http://..." required>
+	</div>
+	<div class="formGroup">
+			<label>Profile Picture</label>
+	<!-- MAX_FILE_SIZE must precede the file input field -->
+    	<input type="hidden" name="MAX_FILE_SIZE" value="300000" />
+    <!-- Name of input element determines name in $_FILES array -->
+		<input type="file" name="userfile" type="file" />    	
+	</div>
+		<input type="reset" name = "reset" value="Reset">
+		<input type="submit" name = "submit" value = "Submit">
+	</form>
+	<section class = "display">
+		<ul>
+			<li>l_name</li><li>f_name</li><li>profilePic</li><li>url</li><li><a href = "delete">DELETE</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "update">UPDATE</a></li><br /><br />
+			<li>l_name</li><li>f_name</li><li>profilePic</li><li>url</li><li><a href = "delete">DELETE</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "update">UPDATE</a></li><br /><br />
+			<li>l_name</li><li>f_name</li><li>profilePic</li><li>url</li><li><a href = "delete">DELETE</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "update">UPDATE</a></li><br /><br />
+			<li>l_name</li><li>f_name</li><li>profilePic</li><li>url</li><li><a href = "delete">DELETE</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "update">UPDATE</a></li><br /><br />
+			<li>l_name</li><li>f_name</li><li>profilePic</li><li>url</li><li><a href = "delete">DELETE</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "update">UPDATE</a></li><br /><br />
+		</ul>
+	</section>
+	</article>
+</body>
+</html>

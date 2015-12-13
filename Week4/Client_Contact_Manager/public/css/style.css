@@ -1,0 +1,70 @@
+/*  Colors
+light blue - 87b7ed
+dark grey - 91908f
+creamy yellow = ffffc6
+darker grey - 5d605d
+brown - 715848 */
+.display:after {
+content: "";
+display: table;
+clear: both;
+}
+
+body{	
+	background: url("../img/walnutBkg.jpg")  fixed center;	
+	font: 20px "Helvetica Nue";
+	overflow: hidden;
+	color: white;
+}
+#clientList{
+	text-align: center;
+}
+article#main{
+	background-color: rgba(135, 183, 237, .6);
+	border-radius: 30px;
+}
+form{
+	float: left;
+	padding: 40px;
+	margin-left: 30px;	
+}
+label{
+	display: inline-block;
+	width: 100px;
+}
+input[type = 'text'], input[type = 'password'], input[type = 'file'], input[type = 'reset'], input[type = 'email'], input[type = 'url']{
+	display: inline-block;
+	border-radius: 10px;
+	height: 30px;
+	width: 200px;
+	margin: 10px 0px;
+	margin-right: 10px;
+	font: 16px "Helvetica Nue";
+	color: white;
+	background: #ffffc6;
+	border: 3px solid #715848;
+}
+input[type = 'file']{
+	height: 20px;	
+}
+input[type = 'submit'], input[type = 'reset'] {
+	float: right;
+	border-radius: 20px;
+	height: 30px;
+	width: 100px;
+	margin: 10px;
+	font: 14px "helvetica Nue";
+	color: #715848;
+	background: #ffffc6;
+	border: 3px solid #715848;
+}
+section.display{
+	margin-top: 150px;
+}
+table{
+	width: 66%;
+}
+th{
+	text-align: left;
+}
+}
