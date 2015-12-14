@@ -4,8 +4,9 @@ $user = 'root';
 $pass = 'root';
 
 // Establish PDO & DSN Connection to Database
-$dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
 
+$dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
+ 
 // Grab Requested Client ID & record where ID equals;
 $id = $_GET['id'];
 // "Select All" fields for matching user for later PRE-populating/updating
@@ -54,7 +55,7 @@ if(isset($_POST['submit'])){
 	</header>
 	<form enctype="multipart/form_clients" id = "update"  method="POST">
 	<?php 
-	while ($row = $result->fetch_assoc()) ?>
+	//while ($row = $result->fetch_assoc()) ?>
 	<h2>Add New Client</h2>
 	<div class="formGroup">
 			<label>First Name</label>
