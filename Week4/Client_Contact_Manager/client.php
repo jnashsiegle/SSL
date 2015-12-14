@@ -19,7 +19,8 @@ $stmt ->bindParam(':phone', $phone);
 $stmt->bindParam(':email', $email);
 $stmt->bindParam(':url', $url);
 $stmt->execute();
-header('Location: client.php?success=1');  //
+
+//need a success message here for adding new contact
 }	
 
 
@@ -32,11 +33,6 @@ header('Location: client.php?success=1');  //
 *	CREATED: 	12/13/2015
 *	======================================
 */
-if ( isset($_GET['success']) && $_GET['success'] == 1 )
-{
-     // treat the succes case ex:
-     echo "Success";
-}
 
 ?>
 <!DOCTYPE html>
@@ -58,7 +54,7 @@ if ( isset($_GET['success']) && $_GET['success'] == 1 )
 		</section>
 	</header>
 
-	<!-- Window for add new client contact form --> 
+	<!-- Modal for add new client contact form --> 
 	<a href="#openModal"><i class="fa fa-user-plus"></i>Add New Client</a>
 
 	<div id="openModal" class="modalDialog">
@@ -90,7 +86,7 @@ if ( isset($_GET['success']) && $_GET['success'] == 1 )
 	</form>
 	</div>
 	</div>
-
+<!--Let's set up our display of client information -->
 	<section class = "display">
 
 	<table>
@@ -103,7 +99,7 @@ if ( isset($_GET['success']) && $_GET['success'] == 1 )
 			<th>Action</th>
 		</tr>
 <?php
-
+//retrieve data to slip into variables with the client list, sorted by last name
 $stmt = $db->prepare('SELECT * FROM clients order by l_name ASC;');
 
 $stmt->execute();
@@ -122,6 +118,6 @@ echo '<tr><td>' . $username . '</td><td>' . substr($row['phone'],0,3) . ' ' . su
 </table>
 </section>
 	
-	</article>
-	</body>
-	</html>
+</article>
+</body>
+</html>

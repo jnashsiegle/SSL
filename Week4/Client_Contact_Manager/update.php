@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
 
 try {
 $dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
-echo "Contact Information Update Successful";
+//test database connection, will be blank unless there is an error
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e)
@@ -35,9 +35,14 @@ echo $e->getMessage();
 
 	$stmt = $dbh->prepare("UPDATE clients SET f_name = '".$f_name."', l_name = '".$l_name."',phone = '".$phone."', email = '".$email."', url = '".$url."'  WHERE id = '".$id."'; ");
 	$stmt->execute();
-	header('Location: client.php?success=1');
+	
+	//success message for updated information
+	
+	header('Location: client.php');
 	die("Update Failed");
 }
+
+
 /*
 * 	======================================
 *	PROJECT:  	SSL - Week 4 finals
@@ -65,8 +70,7 @@ echo $e->getMessage();
 		</section>
 	</header>
 	<form enctype="multipart/form_clients" action = "" id = "update"  method="POST">
-	<?php 
-	//while ($row = $result->fetch_assoc()) ?>
+	
 	<h2>Update Client Information</h2>
 	<div class="formGroup">
 			<label>First Name</label>
