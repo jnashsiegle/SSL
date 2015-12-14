@@ -18,6 +18,7 @@ $stmt 	= $db->prepare("DELETE FROM clients where id IN (:id)");
 
 $stmt->bindParam(':id', $clientid);
 $stmt->execute();
-header('Location: client.php'); //redirecting back to the original client page
+header('Location: client.php?success=1'); //redirecting back to the original client page
 die();
 ?>
+
