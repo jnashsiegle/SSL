@@ -35,7 +35,7 @@ $pass = 'root';
 $salt = "SuperJanaSaltHash";
 
 // Establish PDO & DSN Connection to Database
-$dbh = new PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
+$dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
 
 // Test if 1st form has the empty fields;
 // If not, grab the username & password & bind to DB parameters

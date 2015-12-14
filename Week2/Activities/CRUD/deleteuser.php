@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
 	$user = 'root';
 	$pass = 'root';
 	// Establish PDO & DSN Connection to Database
-	$dbh = new PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
+	$dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
 
 	// Use $_GET t0 confirm userid
 	$userid = $_GET['id'];

@@ -42,7 +42,7 @@ $pass = 'root';
 $salt = "SuperJanaSaltHash";
 
 // Establish PDO & DSN Connection to Database
-$dbh = new PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
+$dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
 
 // Grab Requested Client ID & record where ID equals;
 $userid = $_GET['id'];

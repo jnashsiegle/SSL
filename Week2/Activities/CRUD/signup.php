@@ -70,7 +70,7 @@ if (isset($_POST['submit'])){
 	$pass = 'root';
 
 	//Establish PDO & DSN Connection to Database
-	$dbh = new PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
+	$dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
 
 	$salt = "SuperJanaSaltHash";
 	$epass = md5($_POST['password'] . $salt);
@@ -85,6 +85,6 @@ if (isset($_POST['submit'])){
 	$stmt->execute();
 }	else 	{
 	echo "Sorry, you must submit ALL registration fields in order to proceed. <br /><br />";
-	echo "<a href = 'form.php'>Try again?</a><br /><br />";
+	echo "<a href = 'database_form.php'>Try again?</a><br /><br />";
 }
 ?>

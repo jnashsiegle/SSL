@@ -62,7 +62,7 @@ if(!empty($_SESSION["user_name"])){
 		$salt = "SuperJanaSaltHash";
 
 		// Establish PDO & DSN Connection to Database
-		$dbh = new PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
+		$dbh = new PDO('mysql:host=localhost;dbname=SSL;port=8889', $user, $pass);
 
 		// Read EVERYTHING in database, and sort from A-Z
 		$stmt = $dbh->prepare('SELECT * FROM users101 order by userid ASC;');

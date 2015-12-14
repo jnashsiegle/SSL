@@ -1,9 +1,17 @@
-/*  Colors
+
+
+/*  
+Jana Nash-Siegle
+SSL - Week 4 final
+
+Colors
 light blue - 87b7ed
 dark grey - 91908f
 creamy yellow = ffffc6
 darker grey - 5d605d
 brown - 715848 */
+
+
 .display:after {
 content: "";
 display: table;
@@ -20,7 +28,7 @@ body{
 	text-align: center;
 }
 article#main{
-	background-color: rgba(135, 183, 237, .6);
+	background-color: rgba(113, 88, 72, .6);
 	border-radius: 30px;
 }
 form{
@@ -32,7 +40,7 @@ label{
 	display: inline-block;
 	width: 100px;
 }
-input[type = 'text'], input[type = 'password'], input[type = 'file'], input[type = 'reset'], input[type = 'email'], input[type = 'url']{
+input[type = 'text'], input[type = 'tel'], input[type = 'password'], input[type = 'file'], input[type = 'reset'], input[type = 'email'], input[type = 'url']{
 	display: inline-block;
 	border-radius: 10px;
 	height: 30px;
@@ -40,7 +48,7 @@ input[type = 'text'], input[type = 'password'], input[type = 'file'], input[type
 	margin: 10px 0px;
 	margin-right: 10px;
 	font: 16px "Helvetica Nue";
-	color: white;
+	color: black;
 	background: #ffffc6;
 	border: 3px solid #715848;
 }
@@ -58,13 +66,32 @@ input[type = 'submit'], input[type = 'reset'] {
 	background: #ffffc6;
 	border: 3px solid #715848;
 }
-section.display{
-	margin-top: 150px;
+
+fieldset{
+	position: relative;
 }
-table{
-	width: 66%;
+legend{
+	margin:10px 0;
+	padding: 10px;
 }
+section.display{		
+	margin: 100px auto;
+	padding-bottom: 150px;
+	display: table;		
+}
+
 th{
-	text-align: left;
+	padding: 5px;
 }
+td{
+	border: 2px solid gray;
+	padding: 10px;
+}
+tr:nth-child(odd){
+	background-color: #91908f;	
+	color: white;
+}
+tr:nth-child(even){
+	background-color: #ffffc6;
+	color: black;	
 }

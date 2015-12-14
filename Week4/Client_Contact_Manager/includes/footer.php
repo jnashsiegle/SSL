@@ -1,12 +1,14 @@
-<?
+<?php
 /*
 * 	======================================
-*	PROJECT:  	SSL - LAB 03 PREP
+*	PROJECT:  	SSL - Week 4 Final
 *	FILE: 		views/footer.php
 *	AUTHOR:		Jana Nash-Siegle
-*	CREATED: 	12/2/2015
+*	CREATED: 	12/13/2015
 *	======================================
 */
-//include("controllers/maincontroller.php");
-
 ?>
+
+</article>
+</body>
+</html>
