@@ -81,8 +81,10 @@ $stmt->execute();
 			<label>Website</label>
 			<input type="url" name="url" placeholder = "http://..." required>
 	</div>	
+	<div class = "formGroup">
 		<input type="reset" name = "reset" value="Reset">
 		<input type="submit" name = "submit" value = "Submit">
+	</div>
 	</form>
 	</div>
 	</div>

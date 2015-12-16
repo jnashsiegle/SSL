@@ -68,6 +68,7 @@ echo $e->getMessage();
 			<h1>Client Contact Manager</h1>
 				<h2>for: Jana Nash-Siegle</h2>
 		</section>
+		<a id = "goBack" href = "client.php">Go Back</a>
 	</header>
 	<form enctype="multipart/form_clients" action = "" id = "update"  method="POST">
 	

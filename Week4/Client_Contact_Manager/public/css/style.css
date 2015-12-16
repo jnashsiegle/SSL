@@ -42,7 +42,7 @@ label{
 	display: inline-block;
 	width: 100px;
 }
-input[type = 'text'], input[type = 'tel'], input[type = 'password'], input[type = 'file'], input[type = 'reset'], input[type = 'email'], input[type = 'url']{
+input[type = 'text'], input[type = 'tel'], input[type = 'password'], input[type = 'file'], input[type = 'email'], input[type = 'url']{
 	display: inline-block;
 	border-radius: 10px;
 	height: 30px;
@@ -61,12 +61,11 @@ input[type = 'submit'], input[type = 'reset'] {
 	float: right;
 	border-radius: 20px;
 	height: 30px;
-	width: 100px;
-	margin: 10px;
+	width: 100px;	
 	font: 14px "helvetica Nue";
 	color: #715848;
 	background: #ffffc6;
-	border: 3px solid #715848;
+	border: 3px solid #715848;	
 }
 fieldset{
 	position: relative;
@@ -145,7 +144,7 @@ tr:nth-child(even){
 }
 .close:hover { background: #00d9ff; 
 }
-a[href*="openModal"]{
+a[href*="openModal"], #goBack{
 	margin-left: 15%;	
 }
 a[href*="openModal"]:a{
@@ -153,6 +152,7 @@ a[href*="openModal"]:a{
 }
 form#form_clients{
 	border: 2px solid #d4d4d4;
+	background: rgba(0,0,0,0.4);
 }
 form#update{
 	width: 50%;
