@@ -1,4 +1,7 @@
 <?php
+// Session Start
+session_start();
+$_SESSION['notice'] = "<div class = 'notice'>Your contact no longer exists</div>";
 
 /*
 * 	======================================

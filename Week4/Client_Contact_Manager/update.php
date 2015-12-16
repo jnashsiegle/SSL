@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+$_SESSION['notice'] = "<div class = 'notice'>Changes Confirmed</div>";
 // Establish DB Connection
 $user = 'root';
 $pass = 'root';
@@ -35,11 +38,8 @@ echo $e->getMessage();
 
 	$stmt = $dbh->prepare("UPDATE clients SET f_name = '".$f_name."', l_name = '".$l_name."',phone = '".$phone."', email = '".$email."', url = '".$url."'  WHERE id = '".$id."'; ");
 	$stmt->execute();
-	
-	//success message for updated information
-	
 	header('Location: client.php');
-	die("Update Failed");
+	
 }
 
 

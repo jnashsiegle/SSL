@@ -19,19 +19,19 @@ clear: both;
 }
 
 body{	
-	background: url("../img/walnutBkg.jpg")  fixed center;	
+	background: #000000;
 	font: 20px "Helvetica Nue";
-	overflow: hidden;
+	
 	color: white;
 }
 a{
-	color: red;
+	color: green;
 }
 #clientList{
 	text-align: center;
 }
 article#main{
-	background-color: rgba(113, 88, 72, .6);
+	
 	border-radius: 30px;
 }
 form{	
@@ -78,6 +78,9 @@ section.display{
 	margin: 100px auto;
 	padding-bottom: 150px;
 	display: table;		
+}
+table{
+	border-collapse: collapse;
 }
 th{
 	padding: 5px;
@@ -159,4 +162,10 @@ form#update{
 	margin: 0 auto;
 	text-align: center;
 }
-
+.notice, .notice2 {
+	width: 250px;
+	color: white;
+	padding: 10px;
+	margin-left: 150px;
+	border: 2px double white;
+}
