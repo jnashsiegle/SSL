@@ -93,18 +93,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	</form>
 	</div>
 	</div>
+
+
 <!--Let's set up our display of client information -->
 	<section class = "display">
 
-	<table>
-		<tr>			
-			<th>Username</th>
-			<th>Phone</th>
-			<th>Email</th>
-			<th>WebSite</th>
-			<th>Action</th>
-			<th>Action</th>
-		</tr>
+	
 <?php
 //retrieve data to slip into variables with the client list, sorted by last name
 $stmt = $dbh->prepare('SELECT * FROM clients order by l_name ASC;');
@@ -116,14 +110,26 @@ foreach ($result as $row) {
 $url = '<a href="' . $row['url'] . '" target="_blank"> ' . $row['url'] . ' </a>';
 $email = '<a href="mailto:' . $row['email'] . '" target="_blank"> ' . $row['email'] . ' </a>';
 $username = $row['f_name'] . " " . $row['l_name'];
+$phone = substr($row['phone'],0,3) . ' ' . substr($row['phone'],3,3) . '-' . substr($row['phone'],6,4);
 
-echo '<tr><td>' . $username . '</td><td>' . substr($row['phone'],0,3) . ' ' . substr($row['phone'],3,3) . '-' . substr($row['phone'],6,4) . '</td><td>' . $email . '</td><td>' . $url . 
-'</td><td><a href = "delete.php?id=' . $row['id'] . '"><button id = "delete">Delete</button></a></td><td><a href = "update.php?id=' . $row['id'] . '">Update</a><br />';
+	echo "<div class = 'card'>";  
+	echo '<p><font color = #91908f>NAME:</font>  '. $username."</p>";
+	echo '<p><font color = #91908f>PHONE:</font> ' .$phone. "</p>"; 
+	echo '<p><font color = #91908f>EMAIL:</font> ' . $email . "</p>";
+	echo '<p><font color = #91908f>WEBSITE:</font> ' . $url . "</p>";
+	echo '<a href = "delete.php?id=' . $row['id'] . '"><i class="fa fa-minus-circle" id = "minus"></i></a>';
+	echo '<a href = "update.php?id=' . $row['id'] . '"><i class="fa fa-pencil" id = "edit"></i></a><br />';
+	echo '</div>';
 }
+
+
+//echo '<tr><td>' . $username . '</td><td>' . substr($row['phone'],0,3) . ' ' . substr($row['phone'],3,3) . '-' . substr($row['phone'],6,4) . '</td><td>' . $email . '</td><td>' . $url . 
+//'</td><td><a href = "delete.php?id=' . $row['id'] . '"><button id = "delete">Delete</button></a></td><td><a href = "update.php?id=' . $row['id'] . '">Update</a><br />';
+
 
 ?>
 
-</table>
+
 </section>
 </article>
 
