@@ -1,7 +1,7 @@
+
 /*  
 Jana Nash-Siegle
 SSL - Week 4 final
-
 Colors
 light blue - 87b7ed
 dark grey - 91908f
@@ -17,7 +17,7 @@ clear: both;
 }
 
 body{	
-	background: #070707;
+	background: #000000;
 	font: 20px "Helvetica Nue";
 	
 	color: white;
@@ -71,6 +71,29 @@ fieldset{
 legend{
 	margin:10px 0;
 	padding: 10px;
+}
+section.display{		
+	margin: 100px auto;
+	padding-bottom: 150px;
+	display: table;		
+}
+table{
+	border-collapse: collapse;
+}
+th{
+	padding: 5px;
+}
+td{
+	border: 2px solid gray;
+	padding: 10px;
+}
+tr:nth-child(odd){
+	background-color: #91908f;	
+	color: white;
+}
+tr:nth-child(even){
+	background-color: #ffffc6;
+	color: black;	
 }
 .modalDialog {
 	position: fixed;
@@ -143,34 +166,4 @@ form#update{
 	padding: 10px;
 	margin-left: 150px;
 	border: 2px double white;
-}
-section.display{
-	margin: 0 auto;		
-	width: 80%;
-}
-.card {
-	margin: 20px;
-	padding: 10px;
-	display: inline-block;
-	border: 1px solid #91908f;
-	width: 300px;
-	height: 250px;
-	-webkit-box-shadow: 7px 8px 5px 1px rgba(52,52,52,1);
-	-moz-box-shadow: 7px 8px 5px 1px rgba(52,52,52,1);
-	box-shadow: 7px 8px 5px 1px rgba(52,52,52,1);
-}
-#edit {
-	float: right;
-	margin-right: 10px;
-}
-#minus {
-	margin-left: 10px;
-}
-img{
-	margin-top: 20px;
-	margin-bottom: 40px;
-}
-footer{
-
-	margin: 25px 0 25px 150px;
 }

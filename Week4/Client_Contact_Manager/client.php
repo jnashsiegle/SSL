@@ -56,11 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<section id = "clientList">
 			<h1>Client Contact Manager</h1>
 				<h2>for: Jana Nash-Siegle</h2>
+				<img src = "public/img/contact.jpg" width = "900" height = "248" alt = "Contact Banner">
 		</section>
 	</header>
 
 	<!-- Modal for add new client contact form --> 
-	<a href="#openModal"><i class="fa fa-user-plus"></i>Add New Client</a>
+	<a href="#openModal"><i class="fa fa-user-plus"></i>  &nbsp;Add New Client</a>
 
 	<div id="openModal" class="modalDialog">
 	<div><a href="#close" title="Close" class="close">X</a>
@@ -117,7 +118,7 @@ $phone = substr($row['phone'],0,3) . ' ' . substr($row['phone'],3,3) . '-' . sub
 	echo '<p><font color = #91908f>PHONE:</font> ' .$phone. "</p>"; 
 	echo '<p><font color = #91908f>EMAIL:</font> ' . $email . "</p>";
 	echo '<p><font color = #91908f>WEBSITE:</font> ' . $url . "</p>";
-	echo '<a href = "delete.php?id=' . $row['id'] . '"><i class="fa fa-minus-circle" id = "minus"></i></a>';
+	echo '<a class = "minus" href = "delete.php?id=' . $row['id'] . '"><i class="fa fa-minus-circle"></i></a>';
 	echo '<a href = "update.php?id=' . $row['id'] . '"><i class="fa fa-pencil" id = "edit"></i></a><br />';
 	echo '</div>';
 }
@@ -144,12 +145,15 @@ $phone = substr($row['phone'],0,3) . ' ' . substr($row['phone'],3,3) . '-' . sub
 
 		//Delete Button confirmation
 
-		$('#delete').click(function() {
+		$('.minus').click(function() {
 			return window.confirm(this.title || 'Are you sure you want to delete this contact?');
 		});
 
 	})(jQuery);
 </script>
-
+	<footer>
+  		2015, Jana Nash-Siegle SSL - O'Loughlin.
+  			
+  	</footer>
 </body>
 </html>
