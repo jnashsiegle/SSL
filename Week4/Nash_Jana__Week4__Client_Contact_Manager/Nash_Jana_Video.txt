@@ -1,0 +1,10 @@
+Jana Nash-Siegle
+
+https://youtu.be/Y8v3N_nd-GE
+
+1. Dashboard
+2. Run the application
+	Show adding contact
+	deleting contact
+	editing contact
+3. Go over code

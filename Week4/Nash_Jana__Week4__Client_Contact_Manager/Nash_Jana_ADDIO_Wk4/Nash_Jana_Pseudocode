@@ -1,0 +1,33 @@
+Jana Nash-Siegle
+Final Exam
+Pseudocode
+Contact Manager Client List
+
+1. Open app to main page
+		display client list
+		Links to 3 Action Options
+			Add Client
+			Edit Client
+			Delete Client
+			
+2. Add Client
+		Fields for Name, Email, Phone and Website
+		Server Side Validation for form completion, email and phone validity
+		Save/Submit
+		Add to Database/Show on Website
+		Success Message Alert
+		Redirect Main Page
+		
+3.  Edit Client
+		All fields will be editable
+		Save/Submit Changes
+		Add changes to Database/show on website
+		Success Message Alert
+		Redirect to Main
+		
+4.  Delete Client
+		Filter by ID
+		User confirms Deletion
+		Delete from List / Database
+		Success Message Alert
+		Redirect to Main

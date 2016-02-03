@@ -1,5 +1,14 @@
 <?php
 
+/*
+* 	======================================
+*	PROJECT:  	SSL - Week 4 finals
+*	FILE: 		client.php
+*	AUTHOR:		Jana Nash-Siegle
+*	CREATED: 	12/13/2015
+*	======================================
+*/
+
 session_start();
 if(isset($_SESSION['notice']))
 {

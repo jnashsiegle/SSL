@@ -1,5 +1,15 @@
 <?php
 
+
+/*
+* 	======================================
+*	PROJECT:  	SSL - Week 4 finals
+*	FILE: 		update.php
+*	AUTHOR:		Jana Nash-Siegle
+*	CREATED: 	12/13/2015
+*	======================================
+*/
+
 session_start();
 $_SESSION['notice'] = "<div class = 'notice'>Changes Confirmed</div>";
 // Establish DB Connection
@@ -43,14 +53,6 @@ echo $e->getMessage();
 }
 
 
-/*
-* 	======================================
-*	PROJECT:  	SSL - Week 4 finals
-*	FILE: 		update.php
-*	AUTHOR:		Jana Nash-Siegle
-*	CREATED: 	12/13/2015
-*	======================================
-*/
 ?>
 <!DOCTYPE html>
 <html>
